@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.section
+    div.row.center-align
+      table.responsive-table.centered.highlight
+        thead
+          tr
+            th(data-field="code") Code
+            th(data-field="name") First Name
+            th(data-field="lastName") Last Name
+            th(data-field="dateFrom") Date From
+            th(data-field="dateTo") Date To
+        tbody
+          tr
+            td= code
+            td= firstName
+            td= lastName
+            td= dateFrom
+            td= dateTo

@@ -10,7 +10,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var reservations = require('./routes/reservations');
 var app = express();
-
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 // Use native Node promises
 mongoose.Promise = global.Promise;
@@ -66,9 +67,5 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.post('/checkReserve', (err, req, res, next) => {
-  
-  res.send()
-})
 
 module.exports = app;

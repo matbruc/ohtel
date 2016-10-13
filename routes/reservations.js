@@ -7,7 +7,6 @@ var Reservation = require('../models/Reservation.js');
 /* GET /reservations listing. */
 router.get('/', (req, res, next) => {
   Reservation.find({code: req.headers.code}, (err, reservations) => {
-    console.log(req.headers.code);
     if (err) return next(err);
     res.json(reservations);
   });
