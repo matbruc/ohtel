@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var reservations = require('./routes/reservations');
 var app = express();
+var db = mongoose.connection;
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
@@ -17,8 +18,8 @@ require('isomorphic-fetch');
 mongoose.Promise = global.Promise;
 // connect to DB
 // connect to MongoDB
-mongoose.connect('mongodb://localhost/ohtel');
-
+mongoose.connect('mongodb://admin:h0t3ru@ds059316.mlab.com:59316/hoteru');
+db.on('error', console.error.bind(console, 'connection error:'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
