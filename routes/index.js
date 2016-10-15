@@ -12,8 +12,6 @@ router.get('/checkin', (req, res, next) => res.render('checkin'));
 router.post('/checkCode', (req, res, next) => {
   var code = req.body.reserveId;
   var options = {
-    hostname: 'localhost',
-    port: 3007,
     path: '/reservations',
     method: 'GET',
     headers: {
