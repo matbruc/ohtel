@@ -18,7 +18,7 @@ require('isomorphic-fetch');
 mongoose.Promise = global.Promise;
 // connect to DB
 // connect to MongoDB
-mongoose.connect('mongodb://admin:h0t3ru@ds059316.mlab.com:59316/hoteru');
+mongoose.connect(${MLAB_USER_PASS_HOST});
 db.on('error', console.error.bind(console, 'connection error:'));
 
 // view engine setup
